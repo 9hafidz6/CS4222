@@ -1,0 +1,16 @@
+value of CLOCK_SECOND: 128
+value of RTIMER_SECOND: 65536
+
+ticks for etimer = ~128 for 1 second in real life 
+ticks for rtimer = ~128 for 1 second in real life
+
+compile the code: 
+make TARGET=srf06-cc26xx BOARD=sensortag/cc2650 buzz.bin CPU_FAMILY=cc26xx
+
+1) open uniflash:
+2) select device: cc2650F128
+3) select debug: Texas Instruments XDS110 USB Debug Probe 
+4) press start
+5) select and load buzz.bin 
+6) open terminal and run command: cat /dev/ttyACM0
+7) press reset button on sensortag
